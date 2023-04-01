@@ -1,0 +1,16 @@
+﻿@model EatAndDrink.Controllers.ClientController.ClientCreateViewModel
+
+@{
+    ViewData["Title"] = "New Client";
+}
+
+<form asp-controller="Client" asp-action="Create" asp-method="post">
+    <label class="form-label" asp-for="FirstName"></label>:<input class="form-control" style="max-width:300px" asp-for="FirstName"/> <br />
+    <label class="form-label" asp-for="LastName"></label>:<input class="form-control" style="max-width:300px" asp-for="LastName"/> <br />
+    <label class="form-label" asp-for="PhoneNumber"></label>:<input class="form-control" style="max-width:300px" asp-for="PhoneNumber"/> <br />
+    <label class="form-label" asp-for="Address"></label>:<input class="form-control" style="max-width:300px" asp-for="Address"/> <br />
+
+    <button style="width:97px" class="btn btn-outline-success">Create</button>
+    <button style="width:97px" class="btn btn-outline-danger" asp-controller="Client" asp-action="Index">Отмена</button>
+    <button style="width:97px" class="btn btn-outline-primary" asp-controller="Home" asp-action="Index">Главная</button>
+</form>

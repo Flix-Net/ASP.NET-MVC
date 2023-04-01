@@ -1,0 +1,15 @@
+﻿@model EatAndDrink.Controllers.RestorantController.RestorantCreateViewModel
+
+@{
+    ViewData["Title"] = "New Restorant";
+}
+
+<form asp-controller="Restorant" asp-action="Create" asp-method="post">
+    <label asp-for="Name"></label>:<input style="max-width:300px" class="form-control" asp-for="Name"/> <br />
+    <label asp-for="PhoneNumber"></label>:<input style="max-width:300px" class="form-control" asp-for="PhoneNumber"/> <br />
+    <label asp-for="Address"></label>:<input style="max-width:300px" class="form-control" asp-for="Address"/> <br />
+
+    <button style="width:97px" class="btn btn-outline-success">Create</button>
+    <button style="width:97px" class="btn btn-outline-danger" asp-controller="Restorant" asp-action="Index">Отмена</button>
+    <button style="width:97px" class="btn btn-outline-primary" asp-controller="Home" asp-action="Index">Главная</button>
+</form>

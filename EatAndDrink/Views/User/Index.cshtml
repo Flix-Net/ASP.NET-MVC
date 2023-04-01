@@ -1,0 +1,30 @@
+﻿@model IEnumerable<EatAndDrink.ViewModels.UserWithRoleViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of User</h1>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <td>Email</td>
+            <td>Email confirmed</td>
+            <td>Role</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>@user.EmailConfirmed</td>
+                <td>@user.Role</td>
+                <td>            
+                    <a class="btn btn-outline-primary" role="button" asp-controller="User" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

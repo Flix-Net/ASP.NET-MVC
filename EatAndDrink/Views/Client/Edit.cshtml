@@ -1,0 +1,17 @@
+﻿@model EatAndDrink.Models.Client
+
+@{
+    ViewData["Title"] = "Edit Client";
+}
+
+<form asp-controller="Client" asp-action="Update" asp-method="put">
+    <input class="form-control" style="max-width:300px" asp-for="Id" readonly="readonly"/> <br />
+    <label class="form-label" asp-for="FirstName"></label>:<input class="form-control" style="max-width:300px" asp-for="FirstName" /><br />
+    <label class="form-label" asp-for="LastName"></label>:<input class="form-control" style="max-width:300px" asp-for="LastName" /><br />
+    <label class="form-label" asp-for="PhoneNumber"></label>:<input class="form-control" style="max-width:300px" asp-for="PhoneNumber" /><br />
+    <label class="form-label" asp-for="Address"></label>:<input class="form-control" style="max-width:300px" asp-for="Address" /><br />
+    <button style="width:97px" class="btn btn-outline-success">Update</button>
+
+    <button style="width:97px" class="btn btn-outline-danger" asp-controller="Client" asp-action="Index">Отмена</button>
+    <button style="width:97px" class="btn btn-outline-primary" asp-controller="Home" asp-action="Index">Главная</button>
+</form>
